@@ -1,0 +1,57 @@
+{
+  "projectId": "project_placeholder",
+  "type": "frontend",
+  "name": "Social Media Dashboard - End-to-End Navigation and Functionality",
+  "description": "Verifies that the Streamlit application loads successfully, supports complete sidebar navigation across pages (Home, Dataset Explorer, Exploratory Data Analysis, Feature Importance, About), and displays active system indicators and visual components.",
+  "priority": "p0",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "Navigate to the Streamlit app URL"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the top navbar and the header 'Social Media Engagement Dashboard' are visible on the home screen"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify that the sidebar indicates 'System Online' with a green status badge"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the 'Dataset Overview' section shows the count of 'Total Rows' and 'Total Columns'"
+    },
+    {
+      "type": "action",
+      "description": "Click on the 'Dataset Explorer' option in the sidebar navigation"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify that the Dataset Explorer page header loads and displays raw dataset metrics or profile report"
+    },
+    {
+      "type": "action",
+      "description": "Click on the 'Exploratory Data Analysis' option in the sidebar navigation"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the chart tabs like Histogram and Box Plot are visible"
+    },
+    {
+      "type": "action",
+      "description": "Click on the 'Feature Importance' option in the sidebar navigation"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the 'Top 5 Most Important Features' Gini metric cards are visible"
+    },
+    {
+      "type": "action",
+      "description": "Click on the 'About' option in the sidebar navigation"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify that the 'Technology Stack' cards showing Python and Streamlit are visible"
+    }
+  ]
+}
