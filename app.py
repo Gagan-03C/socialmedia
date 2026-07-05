@@ -2121,21 +2121,27 @@ elif page == "ℹ️  About":
     # ── Developer Information
     st.markdown('<div class="section-header">👨‍💻 Developer Information</div>', unsafe_allow_html=True)
 
-    st.markdown("""
-    <div class="glass-card" style="text-align:center;">
-        <div style="font-size:4rem; margin-bottom:10px;">👨‍💻</div>
-        <h3 style="margin:5px 0;">Developer Name</h3>
-        <p style="color:#8b8fa3; margin:5px 0;">Final Year Machine Learning Project</p>
-        <div style="margin-top:18px;">
-            <a href="https://github.com/" target="_blank" style="text-decoration:none;">
-                <span class="tech-chip">🔗 GitHub</span>
-            </a>
-            <a href="https://linkedin.com/" target="_blank" style="text-decoration:none;">
-                <span class="tech-chip">💼 LinkedIn</span>
-            </a>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    team_members = [
+        {"name": "Gagan S",       "usn": "1EP24AD016", "icon": "&#x1F468;&#x200D;&#x1F4BB;"},
+        {"name": "Manjana Gowda", "usn": "1EP24AD031", "icon": "&#x1F468;&#x200D;&#x1F4BB;"},
+        {"name": "Thrisha B",     "usn": "1EP24AD061", "icon": "&#x1F469;&#x200D;&#x1F4BB;"},
+        {"name": "Ankita",        "usn": "1EP24AD007", "icon": "&#x1F469;&#x200D;&#x1F4BB;"},
+        {"name": "Nehashree",     "usn": "1EP24AD035", "icon": "&#x1F469;&#x200D;&#x1F4BB;"},
+    ]
+
+    team_cards_html = '<div style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-bottom:10px;">'
+    for m in team_members:
+        team_cards_html += (
+            '<div class="glass-card" style="text-align:center;flex:1 1 160px;max-width:200px;padding:22px 16px;border-radius:16px;">'
+            f'<div style="font-size:3rem;margin-bottom:10px;">{m["icon"]}</div>'
+            f'<h4 style="margin:6px 0;color:#00ff88;font-size:1rem;">{m["name"]}</h4>'
+            f'<span style="display:inline-block;margin-top:8px;padding:4px 12px;background:rgba(0,255,136,0.12);border:1px solid rgba(0,255,136,0.3);border-radius:20px;color:#8b8fa3;font-size:0.78rem;letter-spacing:0.5px;font-family:monospace;">{m["usn"]}</span>'
+
+            '</div>'
+        )
+    team_cards_html += '</div>'
+
+    st.markdown(team_cards_html, unsafe_allow_html=True)
 
     st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
 
